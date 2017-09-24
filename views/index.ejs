@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/github-markdown.css">
+<!--<link rel="stylesheet" href="/css/github-markdown.css">
 <style>
 .markdown-body {
   box-sizing: border-box;
@@ -12,3 +12,43 @@
 <article class="markdown-body">
 	<%- md("API.md") %>
 </article>
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Users</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js"></script>
+		<link rel="stylesheet" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css">
+		<link rel="stylesheet" media="screen" href="css/main.css">
+	</head>
+
+	<body>
+	<section class="ui raised center aligned segment">
+		<section class="ui container">
+			<h2 class="ui center aligned header">
+				<i class="users icon"></i>
+				Users
+			</h2>
+		</section>
+
+		<button class="ui basic blue button" id="showAddUser">
+			<i class="icon user"></i>
+			Add User
+		</button>
+	</section>
+
+    <%- include partials/addUser.ejs %>
+	</body>
+
+</html>
+
+<script>
+  $('#showAddUser').click(function () {
+    $('#addUser')
+        .modal('show');
+  });
+</script>
